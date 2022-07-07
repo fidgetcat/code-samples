@@ -1,0 +1,67 @@
+\hypertarget{class_transform}{}\section{Transform Class Reference}
+\label{class_transform}\index{Transform@{Transform}}
+
+
+Class that deals with matrix/vector transformations.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+Inheritance diagram for Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transform}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_transform_ab826e0b6b6a46589e2a8ed4114eae17e}{}\label{class_transform_ab826e0b6b6a46589e2a8ed4114eae17e} 
+{\bfseries Transform} (\hyperlink{class_vector}{Vector} X, \hyperlink{class_vector}{Vector} Y, \hyperlink{class_vector}{Vector} Z, \hyperlink{class_vector}{Vector} W, \hyperlink{class_color}{Color} m\+Col, \hyperlink{class_color}{Color} a\+Col)
+\item 
+\hypertarget{class_transform_a8572d47a093861b3372fe8ee3bddcc10}{}\label{class_transform_a8572d47a093861b3372fe8ee3bddcc10} 
+{\bfseries Transform} (const \hyperlink{class_transform}{Transform} \&thing)
+\item 
+\hypertarget{class_transform_a542213b758a490a2203ea7fd0266776a}{}\label{class_transform_a542213b758a490a2203ea7fd0266776a} 
+\hyperlink{class_transform}{Transform} \& {\bfseries operator=} (const \hyperlink{class_transform}{Transform} \&thing)
+\item 
+\hypertarget{class_transform_ad93311f2830ef5ca081a7d73579d4015}{}\label{class_transform_ad93311f2830ef5ca081a7d73579d4015} 
+\hyperlink{class_vector}{Vector} {\bfseries Apply} (const \hyperlink{class_vector}{Vector} \&input)
+\item 
+\hypertarget{class_transform_a697d100cd8b73be18d5d3af398a0500e}{}\label{class_transform_a697d100cd8b73be18d5d3af398a0500e} 
+\hyperlink{class_color}{Color} {\bfseries Apply} (const \hyperlink{class_color}{Color} \&input)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_transform_aa4081baf6061e5f7e54a5c42e416e00e}{}\label{class_transform_aa4081baf6061e5f7e54a5c42e416e00e} 
+\hyperlink{class_vector}{Vector} {\bfseries x}
+\item 
+\hypertarget{class_transform_a3604995547831490d3825b1fe8e1c107}{}\label{class_transform_a3604995547831490d3825b1fe8e1c107} 
+\hyperlink{class_vector}{Vector} {\bfseries y}
+\item 
+\hypertarget{class_transform_ab7412f8029326c0b94c19deb94cf040f}{}\label{class_transform_ab7412f8029326c0b94c19deb94cf040f} 
+\hyperlink{class_vector}{Vector} {\bfseries z}
+\item 
+\hypertarget{class_transform_a2ad38abb95feb341ada8d00b66d67647}{}\label{class_transform_a2ad38abb95feb341ada8d00b66d67647} 
+\hyperlink{class_vector}{Vector} {\bfseries w}
+\item 
+\hypertarget{class_transform_a925437b8247dd58f70fb1b4293d23a69}{}\label{class_transform_a925437b8247dd58f70fb1b4293d23a69} 
+\hyperlink{class_color}{Color} {\bfseries mul\+Col}
+\item 
+\hypertarget{class_transform_ab1127e4bc3d8be4c2396988f703e2648}{}\label{class_transform_ab1127e4bc3d8be4c2396988f703e2648} 
+\hyperlink{class_color}{Color} {\bfseries add\+Col}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that deals with matrix/vector transformations. 
+
+\hyperlink{class_transform}{Transform} and its children perform matrix and vertex calculations. Most often, game programmers will make use of the various children to quickly create and pass various kinds of transformations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Transform.\+h\item 
+Transform.\+cpp\end{DoxyCompactItemize}

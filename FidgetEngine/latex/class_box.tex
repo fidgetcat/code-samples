@@ -1,0 +1,38 @@
+\hypertarget{class_box}{}\section{Box Class Reference}
+\label{class_box}\index{Box@{Box}}
+
+
+The basic building block for the game.  
+
+
+
+
+{\ttfamily \#include $<$Scr\+Obj.\+h$>$}
+
+Inheritance diagram for Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_box}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_box_a1a76055740b6ae3061ae210cd55785b7}{}\label{class_box_a1a76055740b6ae3061ae210cd55785b7} 
+{\bfseries Box} (class \hyperlink{class_engine}{Engine} $\ast$game, \hyperlink{class_rect}{Rect} refrect)
+\item 
+\hypertarget{class_box_a97fa7330aafa9f4cafe300cbf3436d04}{}\label{class_box_a97fa7330aafa9f4cafe300cbf3436d04} 
+void {\bfseries Draw\+Event} (class \hyperlink{class_engine}{Engine} $\ast$game\+Engine, \hyperlink{class_transform}{Transform} parent\+Trans)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The basic building block for the game. 
+
+Combining Screen \hyperlink{class_object}{Object} and \hyperlink{class_rect}{Rect}, this class represents an object that can be drawn on the screen, with its reference space being used to both draw and calculate bounding box collisions. Its overload of the Draw\+Event method stretches its associated Objects to fit its \hyperlink{class_rect}{Rect}\textquotesingle{}s reference space. (after any other transformations supplied to the object, which allows for \char`\"{}stretching\char`\"{} that doesn\textquotesingle{}t match exactly the \hyperlink{class_rect}{Rect}\textquotesingle{}s reference space) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scr\+Obj.\+h\item 
+Scr\+Obj.\+cpp\end{DoxyCompactItemize}

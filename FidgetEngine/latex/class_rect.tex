@@ -1,0 +1,89 @@
+\hypertarget{class_rect}{}\section{Rect Class Reference}
+\label{class_rect}\index{Rect@{Rect}}
+
+
+Class used for making boxes used in collisions and Screen Objects.  
+
+
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
+Inheritance diagram for Rect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_rect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rect_ad24b6cae9dd49da138e054b7b7b5ac3f}{Rect} (\hyperlink{class_vector2}{Vector2} p1, \hyperlink{class_vector2}{Vector2} p2)
+\begin{DoxyCompactList}\small\item\em Constructor that accepts two points. \end{DoxyCompactList}\item 
+\hypertarget{class_rect_a3f92c92e465b3a789f4da3e0d295c53a}{}\label{class_rect_a3f92c92e465b3a789f4da3e0d295c53a} 
+\hyperlink{class_rect_a3f92c92e465b3a789f4da3e0d295c53a}{Rect} (const \hyperlink{class_rect}{Rect} \&thing)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_rect_a176d3cbbec5903c85063cac2fb380afc}{}\label{class_rect_a176d3cbbec5903c85063cac2fb380afc} 
+\hyperlink{class_rect}{Rect} {\bfseries operator+} (const \hyperlink{class_vector2}{Vector2} \&vecin)
+\item 
+\hypertarget{class_rect_a9aeefc780b44fc2cf9c151e4c24cba9d}{}\label{class_rect_a9aeefc780b44fc2cf9c151e4c24cba9d} 
+\hyperlink{class_rect}{Rect} \& {\bfseries operator=} (const \hyperlink{class_rect}{Rect} \&thing)
+\item 
+\hypertarget{class_rect_abe5622a1eb8736a2022e3e01ea983c73}{}\label{class_rect_abe5622a1eb8736a2022e3e01ea983c73} 
+\hyperlink{class_vector2}{Vector2} {\bfseries Get\+Center} ()
+\item 
+\hypertarget{class_rect_a5744f2db0f140913670eeda0649ab201}{}\label{class_rect_a5744f2db0f140913670eeda0649ab201} 
+bool \hyperlink{class_rect_a5744f2db0f140913670eeda0649ab201}{Check\+Overlap} (\hyperlink{class_rect}{Rect} other\+Box)
+\begin{DoxyCompactList}\small\item\em Checks if an overlap occurs with the argument. \end{DoxyCompactList}\item 
+\hypertarget{class_rect_ae4e3467a3e1f5c23686326a8c6bbafcf}{}\label{class_rect_ae4e3467a3e1f5c23686326a8c6bbafcf} 
+double {\bfseries Get\+Height} ()
+\item 
+\hypertarget{class_rect_a193f7f6cfb2a58c7b66e1143d1ddeb10}{}\label{class_rect_a193f7f6cfb2a58c7b66e1143d1ddeb10} 
+double {\bfseries Get\+Width} ()
+\item 
+\hypertarget{class_rect_a098ae9f097da18fb509f873305d066ed}{}\label{class_rect_a098ae9f097da18fb509f873305d066ed} 
+void \hyperlink{class_rect_a098ae9f097da18fb509f873305d066ed}{Displace} (\hyperlink{class_vector2}{Vector2} inputvec)
+\begin{DoxyCompactList}\small\item\em Displaces the rect by the supplied vector. \end{DoxyCompactList}\item 
+\hypertarget{class_rect_a8d32f2a6333f11f6c415823dd352f631}{}\label{class_rect_a8d32f2a6333f11f6c415823dd352f631} 
+void \hyperlink{class_rect_a8d32f2a6333f11f6c415823dd352f631}{Place} (\hyperlink{class_vector2}{Vector2} inputvec)
+\begin{DoxyCompactList}\small\item\em Places the rect (centered) at the supplied point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_rect_a6ce67f181f04d552c5b618e47b282a80}{}\label{class_rect_a6ce67f181f04d552c5b618e47b282a80} 
+\hyperlink{class_vector2}{Vector2} {\bfseries pt1}
+\item 
+\hypertarget{class_rect_a691c7827e063156b2cefbb1f2d74b6f5}{}\label{class_rect_a691c7827e063156b2cefbb1f2d74b6f5} 
+\hyperlink{class_vector2}{Vector2} {\bfseries pt2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used for making boxes used in collisions and Screen Objects. 
+
+This class is mainly used as a reference space for Screen Objects. It defines a box with many useful methods good for checking collisions and moving the box around. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_rect_ad24b6cae9dd49da138e054b7b7b5ac3f}{}\label{class_rect_ad24b6cae9dd49da138e054b7b7b5ac3f} 
+\index{Rect@{Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!Rect@{Rect}}
+\subsubsection{\texorpdfstring{Rect()}{Rect()}}
+{\footnotesize\ttfamily Rect\+::\+Rect (\begin{DoxyParamCaption}\item[{\hyperlink{class_vector2}{Vector2}}]{p1,  }\item[{\hyperlink{class_vector2}{Vector2}}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Constructor that accepts two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & -\/ The first point must always be the lower left point of the rect. \\
+\hline
+{\em p2} & -\/ The second point must always be the top right point of the rect. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vector.\+h\item 
+Vector.\+cpp\end{DoxyCompactItemize}

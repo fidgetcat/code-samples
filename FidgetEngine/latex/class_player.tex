@@ -1,0 +1,100 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.324325cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_ae06a51f500b10368dd5ebb7853566b22}{}\label{class_player_ae06a51f500b10368dd5ebb7853566b22} 
+{\bfseries Player} (\hyperlink{class_engine}{Engine} $\ast$game, \hyperlink{class_rect}{Rect} refrect, const char $\ast$input, const char $\ast$input2, int ID)
+\item 
+\hypertarget{class_player_afb17544a1c1d12cba93e77a25fbd27a9}{}\label{class_player_afb17544a1c1d12cba93e77a25fbd27a9} 
+void {\bfseries Sprite\+Proc} ()
+\item 
+\hypertarget{class_player_a79060b32a95ca6e3f7a482b9ed45fa07}{}\label{class_player_a79060b32a95ca6e3f7a482b9ed45fa07} 
+void {\bfseries Take\+Damage} ()
+\item 
+\hypertarget{class_player_aa6077bbdf83a68e49deec5425fa490a5}{}\label{class_player_aa6077bbdf83a68e49deec5425fa490a5} 
+void {\bfseries Interact\+Event} (class \hyperlink{class_scr_object}{Scr\+Object} $\ast$obj)
+\item 
+\hypertarget{class_player_acb2790a9c737e1b9c1ab744abdcbc6a0}{}\label{class_player_acb2790a9c737e1b9c1ab744abdcbc6a0} 
+void {\bfseries Interact\+Player} (class \hyperlink{class_player}{Player} $\ast$other)
+\item 
+\hypertarget{class_player_a89d63167bff6dac4cb9a04265908457b}{}\label{class_player_a89d63167bff6dac4cb9a04265908457b} 
+void {\bfseries Interact\+Platform} (class \hyperlink{class_platform}{Platform} $\ast$other)
+\item 
+\hypertarget{class_player_a1334990b8b7aaaad904e22f03f4d947d}{}\label{class_player_a1334990b8b7aaaad904e22f03f4d947d} 
+void {\bfseries Jump} ()
+\item 
+\hypertarget{class_player_a6c879db24d39d894207e078eb4c56e8d}{}\label{class_player_a6c879db24d39d894207e078eb4c56e8d} 
+void {\bfseries Attack} ()
+\item 
+\hypertarget{class_player_ac9d22befc482bf7f2ae7956d9116baf6}{}\label{class_player_ac9d22befc482bf7f2ae7956d9116baf6} 
+void {\bfseries Key\+Dn\+Event} (\hyperlink{class_key_handler_1_1_key_a832541e186986ff9f6bd5a810ed5c164}{Key\+::\+Keycode} key\+In, bool alt, bool control, bool shift, bool system)
+\item 
+\hypertarget{class_player_ae849a9d15bb49f8be75b792eb0ad91ff}{}\label{class_player_ae849a9d15bb49f8be75b792eb0ad91ff} 
+void {\bfseries Time\+Event} (double curr\+Time)
+\item 
+\hypertarget{class_player_a5f4e16ffd07d713353123f5778f1d9b6}{}\label{class_player_a5f4e16ffd07d713353123f5778f1d9b6} 
+void {\bfseries Key\+Up\+Event} (\hyperlink{class_key_handler_1_1_key_a832541e186986ff9f6bd5a810ed5c164}{Key\+::\+Keycode} key\+In, bool alt, bool control, bool shift, bool system)
+\item 
+\hypertarget{class_player_a5feaecbb7796f319449f2fd7abd7c226}{}\label{class_player_a5feaecbb7796f319449f2fd7abd7c226} 
+void {\bfseries Udp\+Event} (class \hyperlink{class_packet}{Packet} $\ast$pktin, class \hyperlink{class_i_padd}{I\+Padd} addin, unsigned short portin)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_player_af56d931c400cdea7c22e8160093037e3}{}\label{class_player_af56d931c400cdea7c22e8160093037e3} 
+\hyperlink{class_fancy_square}{Fancy\+Square} {\bfseries idle\+Spr}
+\item 
+\hypertarget{class_player_a2541c4c6dc509de5a68752d4e9d43d15}{}\label{class_player_a2541c4c6dc509de5a68752d4e9d43d15} 
+\hyperlink{class_fancy_square}{Fancy\+Square} {\bfseries atk\+Spr}
+\item 
+\hypertarget{class_player_a4c90c45b5567f3ad77ab62b836a4538d}{}\label{class_player_a4c90c45b5567f3ad77ab62b836a4538d} 
+\hyperlink{class_lifebar}{Lifebar} {\bfseries guts}
+\item 
+\hypertarget{class_player_a33c1b79f3bd3885c420d88acee0431f7}{}\label{class_player_a33c1b79f3bd3885c420d88acee0431f7} 
+int {\bfseries player\+ID}
+\item 
+\hypertarget{class_player_aad3727f9bbaeaffc4ba09c7805ad2a09}{}\label{class_player_aad3727f9bbaeaffc4ba09c7805ad2a09} 
+bool {\bfseries in\+Air}
+\item 
+\hypertarget{class_player_a319ddbd239b2114102f0d6e742c6f8b0}{}\label{class_player_a319ddbd239b2114102f0d6e742c6f8b0} 
+bool {\bfseries facing\+Right}
+\item 
+\hypertarget{class_player_a332b68cd95ad6ef4b513f8bfdd416951}{}\label{class_player_a332b68cd95ad6ef4b513f8bfdd416951} 
+bool {\bfseries in\+Atk}
+\item 
+\hypertarget{class_player_a9a1e8db696e64fae86431fd60076c2ea}{}\label{class_player_a9a1e8db696e64fae86431fd60076c2ea} 
+double {\bfseries atk\+Timer}
+\item 
+\hypertarget{class_player_a60d5cfe903e32557ff4847d1409f7cd1}{}\label{class_player_a60d5cfe903e32557ff4847d1409f7cd1} 
+double {\bfseries atk\+CD}
+\item 
+\hypertarget{class_player_a3b5a5fceb2d734ca5816bf509e78ca9d}{}\label{class_player_a3b5a5fceb2d734ca5816bf509e78ca9d} 
+double {\bfseries invul\+Timer}
+\item 
+\hypertarget{class_player_ab2b72a8e3b80192e49d77c79ffdd2d01}{}\label{class_player_ab2b72a8e3b80192e49d77c79ffdd2d01} 
+double {\bfseries invul\+CD}
+\item 
+\hypertarget{class_player_a231c9aa13c1530858d5b16069935a725}{}\label{class_player_a231c9aa13c1530858d5b16069935a725} 
+double {\bfseries atk\+Width}
+\item 
+\hypertarget{class_player_a8787ba98f514093218da0b971c7db8b3}{}\label{class_player_a8787ba98f514093218da0b971c7db8b3} 
+double {\bfseries atk\+Height}
+\item 
+\hypertarget{class_player_a359f983f7b2e401f4d9f35ad24a082b8}{}\label{class_player_a359f983f7b2e401f4d9f35ad24a082b8} 
+double {\bfseries y\+Adjust}
+\item 
+\hypertarget{class_player_aa5b271dcb0c0843a5f5694565bcad3a0}{}\label{class_player_aa5b271dcb0c0843a5f5694565bcad3a0} 
+double {\bfseries health}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fight\+Game.\+cpp\end{DoxyCompactItemize}

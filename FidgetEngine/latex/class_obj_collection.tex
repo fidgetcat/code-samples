@@ -1,0 +1,62 @@
+\hypertarget{class_obj_collection}{}\section{Obj\+Collection Class Reference}
+\label{class_obj_collection}\index{Obj\+Collection@{Obj\+Collection}}
+
+
+Container/linked list used to manage Objects.  
+
+
+
+
+{\ttfamily \#include $<$Collection.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_obj_collection_ac0edc07cad1b67925b032bd93a9e72d8}{}\label{class_obj_collection_ac0edc07cad1b67925b032bd93a9e72d8} 
+\hyperlink{class_obj_collection_ac0edc07cad1b67925b032bd93a9e72d8}{Obj\+Collection} ()
+\begin{DoxyCompactList}\small\item\em Inits head to null. \end{DoxyCompactList}\item 
+\hypertarget{class_obj_collection_a97764e65b3ced57232008835f938b67a}{}\label{class_obj_collection_a97764e65b3ced57232008835f938b67a} 
+\hyperlink{class_obj_collection_a97764e65b3ced57232008835f938b67a}{$\sim$\+Obj\+Collection} ()
+\begin{DoxyCompactList}\small\item\em Detaches all objects associated with nodes in this collection, therefore depopulating list as well. \end{DoxyCompactList}\item 
+\hypertarget{class_obj_collection_a109344a592e7f2daa0f3b4f5dc9d926d}{}\label{class_obj_collection_a109344a592e7f2daa0f3b4f5dc9d926d} 
+void \hyperlink{class_obj_collection_a109344a592e7f2daa0f3b4f5dc9d926d}{Remove} (\hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$target)
+\begin{DoxyCompactList}\small\item\em Removes specified node from the list. This is really only called by \hyperlink{class_object}{Object}\textquotesingle{}s Detach(). \end{DoxyCompactList}\item 
+\hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$ \hyperlink{class_obj_collection_a0fc6d26772a3f657a41ca9360e65b33f}{Add} (\hyperlink{class_object}{Object} $\ast$input, \hyperlink{class_transform}{Transform} in\+Trans)
+\begin{DoxyCompactList}\small\item\em This list adds nodes to the start of the list, not to the end, with the oldest nodes at the end of the list. The pointer returned is used by the \hyperlink{class_object}{Object} associated with this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_obj_collection_add6095e3454bd7ab4f288ac842cc7fce}{}\label{class_obj_collection_add6095e3454bd7ab4f288ac842cc7fce} 
+\hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$ \hyperlink{class_obj_collection_add6095e3454bd7ab4f288ac842cc7fce}{my\+Head}
+\begin{DoxyCompactList}\small\item\em The first node in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container/linked list used to manage Objects. 
+
+Mainly used by C\+Objects. Manages nodes that store pointer information. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_obj_collection_a0fc6d26772a3f657a41ca9360e65b33f}{}\label{class_obj_collection_a0fc6d26772a3f657a41ca9360e65b33f} 
+\index{Obj\+Collection@{Obj\+Collection}!Add@{Add}}
+\index{Add@{Add}!Obj\+Collection@{Obj\+Collection}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$ Obj\+Collection\+::\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_object}{Object} $\ast$}]{input,  }\item[{\hyperlink{class_transform}{Transform}}]{in\+Trans }\end{DoxyParamCaption})}
+
+
+
+This list adds nodes to the start of the list, not to the end, with the oldest nodes at the end of the list. The pointer returned is used by the \hyperlink{class_object}{Object} associated with this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ The object associated with this node \\
+\hline
+{\em in\+Trans} & -\/ The transform information to store in the node. Usually this is some offset from the parent\textquotesingle{}s transform. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Collection.\+h\item 
+Collection.\+cpp\end{DoxyCompactItemize}

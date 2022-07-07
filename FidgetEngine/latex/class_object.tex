@@ -1,0 +1,97 @@
+\hypertarget{class_object}{}\section{Object Class Reference}
+\label{class_object}\index{Object@{Object}}
+
+
+Base class for almost all rendered entities in the engine.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.833333cm]{class_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_object_a40860402e64d8008fb42329df7097cdb}{}\label{class_object_a40860402e64d8008fb42329df7097cdb} 
+\hyperlink{class_object_a40860402e64d8008fb42329df7097cdb}{Object} ()
+\begin{DoxyCompactList}\small\item\em Simple constructor that sets parent and node to null. \end{DoxyCompactList}\item 
+\hypertarget{class_object_ae8f5483f459e46687bd01e6f9977afd3}{}\label{class_object_ae8f5483f459e46687bd01e6f9977afd3} 
+\hyperlink{class_object_ae8f5483f459e46687bd01e6f9977afd3}{$\sim$\+Object} ()
+\begin{DoxyCompactList}\small\item\em The destructor simply calls detach. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_object_adeb7a19aaca51dbf093b37fd21c5e41f}{Draw} (class \hyperlink{class_engine}{Engine} $\ast$game\+Engine, \hyperlink{class_transform}{Transform} parent\+Trans)=0
+\begin{DoxyCompactList}\small\item\em Virtual function meant to be implemented by children. Some objects use Draw to pass information, delegating the actual drawing to the objects at the end of the parent-\/child hierarchy. \end{DoxyCompactList}\item 
+void \hyperlink{class_object_ab0d9f0a189f0587d672cc21008b2be76}{Attach\+To} (class \hyperlink{class_c_object}{C\+Object} $\ast$target, \hyperlink{class_transform}{Transform} input\+Trans)
+\begin{DoxyCompactList}\small\item\em Function to attach objects (whether \hyperlink{class_c_object}{C\+Object} or otherwise) to C\+Objects. This will create a new node and place it in the \hyperlink{class_c_object}{C\+Object}\textquotesingle{}s list, which is appropriately updated. \end{DoxyCompactList}\item 
+\hypertarget{class_object_ad818b7d495bf99bedcabfdf0f37774ac}{}\label{class_object_ad818b7d495bf99bedcabfdf0f37774ac} 
+void \hyperlink{class_object_ad818b7d495bf99bedcabfdf0f37774ac}{Detach} ()
+\begin{DoxyCompactList}\small\item\em Removes this object\textquotesingle{}s node from its parent\textquotesingle{}s collection, then sets its node and parent to null. \end{DoxyCompactList}\item 
+\hypertarget{class_object_a9df4b0c95c3af3a00f8193a4a8e5888c}{}\label{class_object_a9df4b0c95c3af3a00f8193a4a8e5888c} 
+void \hyperlink{class_object_a9df4b0c95c3af3a00f8193a4a8e5888c}{UpdateT} (\hyperlink{class_transform}{Transform} input)
+\begin{DoxyCompactList}\small\item\em Changes the transform information stored in the object\textquotesingle{}s node (if one exists). Note that this overwrites the old transform information if it is not explicitly added to the old one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_object_a986b4a5516d90927038453711be9a4e8}{}\label{class_object_a986b4a5516d90927038453711be9a4e8} 
+class \hyperlink{class_c_object}{C\+Object} $\ast$ \hyperlink{class_object_a986b4a5516d90927038453711be9a4e8}{my\+Parent}
+\begin{DoxyCompactList}\small\item\em This is the object\textquotesingle{}s parent. Normally, game objects are not drawn if they don\textquotesingle{}t have a parent. \end{DoxyCompactList}\item 
+\hypertarget{class_object_ab95df2681777f02917105b7797acde33}{}\label{class_object_ab95df2681777f02917105b7797acde33} 
+struct \hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$ \hyperlink{class_object_ab95df2681777f02917105b7797acde33}{my\+Node}
+\begin{DoxyCompactList}\small\item\em This points to the node that this object is stored in. This information is used to update the list that the object resides in. It can also be used to change the object\textquotesingle{}s transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for almost all rendered entities in the engine. 
+
+Many children inherit from this base class. It provides basic functionality for attaching to C\+Objects and drawing. Since it in always assumed that an \hyperlink{class_object}{Object} has a parent, and since object parents are collections, this makes it easy to make a long hierarchy of game objects. This is particularly useful for passing down transformation info. This also means that rendering occurs according to a parent-\/child hierarchy. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_object_ab0d9f0a189f0587d672cc21008b2be76}{}\label{class_object_ab0d9f0a189f0587d672cc21008b2be76} 
+\index{Object@{Object}!Attach\+To@{Attach\+To}}
+\index{Attach\+To@{Attach\+To}!Object@{Object}}
+\subsubsection{\texorpdfstring{Attach\+To()}{AttachTo()}}
+{\footnotesize\ttfamily void Object\+::\+Attach\+To (\begin{DoxyParamCaption}\item[{class \hyperlink{class_c_object}{C\+Object} $\ast$}]{target,  }\item[{\hyperlink{class_transform}{Transform}}]{input\+Trans }\end{DoxyParamCaption})}
+
+
+
+Function to attach objects (whether \hyperlink{class_c_object}{C\+Object} or otherwise) to C\+Objects. This will create a new node and place it in the \hyperlink{class_c_object}{C\+Object}\textquotesingle{}s list, which is appropriately updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & -\/ Pointer to the \hyperlink{class_c_object}{C\+Object} to be attached to \\
+\hline
+{\em input\+Trans} & -\/ In Attach\+To, the input transform can be thought of as an offset or difference (using the parent transform as reference). It is stored in the object\textquotesingle{}s node and later added to the parent\textquotesingle{}s transform. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_object_adeb7a19aaca51dbf093b37fd21c5e41f}{}\label{class_object_adeb7a19aaca51dbf093b37fd21c5e41f} 
+\index{Object@{Object}!Draw@{Draw}}
+\index{Draw@{Draw}!Object@{Object}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void Object\+::\+Draw (\begin{DoxyParamCaption}\item[{class \hyperlink{class_engine}{Engine} $\ast$}]{game\+Engine,  }\item[{\hyperlink{class_transform}{Transform}}]{parent\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual function meant to be implemented by children. Some objects use Draw to pass information, delegating the actual drawing to the objects at the end of the parent-\/child hierarchy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Engine} & -\/ Pointer to the game engine that will render this \\
+\hline
+{\em parent\+Trans} & -\/ \hyperlink{class_transform}{Transform} being passed to the object. With long chains of object children/parents, transforms can be cumulative. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_fancy_square_ac77d35ba8ab766f8a3e35f68e7344953}{Fancy\+Square}, \hyperlink{class_c_object_a65338dd4ac20a20340875597344c0c4b}{C\+Object}, \hyperlink{class_square_a9a533e0dd001a0b883bea5145c7444e0}{Square}, and \hyperlink{class_triangle_a2c8418bbe7a955b9ad53571a5832e1b0}{Triangle}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Object.\+h\item 
+Object.\+cpp\end{DoxyCompactItemize}

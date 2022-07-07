@@ -1,0 +1,69 @@
+\hypertarget{class_c_object}{}\section{C\+Object Class Reference}
+\label{class_c_object}\index{C\+Object@{C\+Object}}
+
+
+C\+O\+L\+L\+E\+C\+T\+I\+ON O\+B\+J\+E\+CT Basic building block for your game objects. Tiles inherit from this, and most if not all game objects should inherit from this.  
+
+
+
+
+{\ttfamily \#include $<$C\+Object.\+h$>$}
+
+Inheritance diagram for C\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{class_c_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_object_ac44111d5ac75248a616df61b038c4153}{}\label{class_c_object_ac44111d5ac75248a616df61b038c4153} 
+\hyperlink{class_c_object_ac44111d5ac75248a616df61b038c4153}{C\+Object} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+\hypertarget{class_c_object_a93a3c3bc7d9a6462ef00e25404d9b0eb}{}\label{class_c_object_a93a3c3bc7d9a6462ef00e25404d9b0eb} 
+\hyperlink{class_c_object_a93a3c3bc7d9a6462ef00e25404d9b0eb}{$\sim$\+C\+Object} ()
+\begin{DoxyCompactList}\small\item\em Empty destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_c_object_a65338dd4ac20a20340875597344c0c4b}{Draw} (class \hyperlink{class_engine}{Engine} $\ast$game\+Engine, \hyperlink{class_transform}{Transform} parent\+Trans)
+\begin{DoxyCompactList}\small\item\em Calls draw on all the objects in the collection, while passing transform information down. The game programmer will rarely (never) explicitly call a specific \hyperlink{class_c_object}{C\+Object}\textquotesingle{}s Draw since this is mainly for passing transform information down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_object_a3248fbe274d6d69f38fccb60fdd5ceb3}{}\label{class_c_object_a3248fbe274d6d69f38fccb60fdd5ceb3} 
+\hyperlink{class_obj_collection}{Obj\+Collection} \hyperlink{class_c_object_a3248fbe274d6d69f38fccb60fdd5ceb3}{my\+Stuff}
+\begin{DoxyCompactList}\small\item\em The collection of objects associated with this \hyperlink{class_c_object}{C\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+O\+L\+L\+E\+C\+T\+I\+ON O\+B\+J\+E\+CT Basic building block for your game objects. Tiles inherit from this, and most if not all game objects should inherit from this. 
+
+A \hyperlink{class_c_object}{C\+Object}\textquotesingle{}s (Collection \hyperlink{class_object}{Object}) job is to store other objects/\+C\+Objects and pass down transformation info down the object chain. They can be used to group different kinds of objects, for example, and easily transform the group as a whole while conforming to parent reference transforms. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_object_a65338dd4ac20a20340875597344c0c4b}{}\label{class_c_object_a65338dd4ac20a20340875597344c0c4b} 
+\index{C\+Object@{C\+Object}!Draw@{Draw}}
+\index{Draw@{Draw}!C\+Object@{C\+Object}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void C\+Object\+::\+Draw (\begin{DoxyParamCaption}\item[{class \hyperlink{class_engine}{Engine} $\ast$}]{game\+Engine,  }\item[{\hyperlink{class_transform}{Transform}}]{parent\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calls draw on all the objects in the collection, while passing transform information down. The game programmer will rarely (never) explicitly call a specific \hyperlink{class_c_object}{C\+Object}\textquotesingle{}s Draw since this is mainly for passing transform information down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Engine} & -\/ pointer to engine that will draw this collection \\
+\hline
+{\em parent\+Trans} & -\/ transform information being applied to objects in this collection \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_object_adeb7a19aaca51dbf093b37fd21c5e41f}{Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+Object.\+h\item 
+C\+Object.\+cpp\end{DoxyCompactItemize}

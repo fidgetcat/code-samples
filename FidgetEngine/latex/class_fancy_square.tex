@@ -1,0 +1,64 @@
+\hypertarget{class_fancy_square}{}\section{Fancy\+Square Class Reference}
+\label{class_fancy_square}\index{Fancy\+Square@{Fancy\+Square}}
+
+
+Low-\/level \hyperlink{class_object}{Object} prefab that draws a simple textured square.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+Inheritance diagram for Fancy\+Square\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fancy_square}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_fancy_square_a2ddb3b7be2421b2f6753ed6bb747f2ea}{}\label{class_fancy_square_a2ddb3b7be2421b2f6753ed6bb747f2ea} 
+{\bfseries Fancy\+Square} (const char $\ast$input)
+\item 
+virtual void \hyperlink{class_fancy_square_ac77d35ba8ab766f8a3e35f68e7344953}{Draw} (class \hyperlink{class_engine}{Engine} $\ast$game\+Engine, \hyperlink{class_transform}{Transform} parent\+Trans)
+\begin{DoxyCompactList}\small\item\em Virtual function meant to be implemented by children. Some objects use Draw to pass information, delegating the actual drawing to the objects at the end of the parent-\/child hierarchy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_fancy_square_ae08622ddfab2e5c59a2af7978b10b0fc}{}\label{class_fancy_square_ae08622ddfab2e5c59a2af7978b10b0fc} 
+\hyperlink{class_split_model_t_x}{Split\+Model\+TX} {\bfseries my\+Obj}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Low-\/level \hyperlink{class_object}{Object} prefab that draws a simple textured square. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_fancy_square_ac77d35ba8ab766f8a3e35f68e7344953}{}\label{class_fancy_square_ac77d35ba8ab766f8a3e35f68e7344953} 
+\index{Fancy\+Square@{Fancy\+Square}!Draw@{Draw}}
+\index{Draw@{Draw}!Fancy\+Square@{Fancy\+Square}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Fancy\+Square\+::\+Draw (\begin{DoxyParamCaption}\item[{class \hyperlink{class_engine}{Engine} $\ast$}]{game\+Engine,  }\item[{\hyperlink{class_transform}{Transform}}]{parent\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual function meant to be implemented by children. Some objects use Draw to pass information, delegating the actual drawing to the objects at the end of the parent-\/child hierarchy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Engine} & -\/ Pointer to the game engine that will render this \\
+\hline
+{\em parent\+Trans} & -\/ \hyperlink{class_transform}{Transform} being passed to the object. With long chains of object children/parents, transforms can be cumulative. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_object_adeb7a19aaca51dbf093b37fd21c5e41f}{Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Shape.\+h\item 
+Shape.\+cpp\end{DoxyCompactItemize}

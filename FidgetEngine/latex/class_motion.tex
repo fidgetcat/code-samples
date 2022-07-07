@@ -1,0 +1,50 @@
+\hypertarget{class_motion}{}\section{Motion Class Reference}
+\label{class_motion}\index{Motion@{Motion}}
+
+
+Helper class that has simple functionality for primitive vector physics calculations.  
+
+
+
+
+{\ttfamily \#include $<$Physics.\+h$>$}
+
+Inheritance diagram for Motion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_motion}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_motion_a4c7abd6f494d4c6900c41de832b3a81d}{}\label{class_motion_a4c7abd6f494d4c6900c41de832b3a81d} 
+\hyperlink{class_motion_a4c7abd6f494d4c6900c41de832b3a81d}{Motion} (double initime, \hyperlink{class_vector2}{Vector2} acc=\hyperlink{class_vector2}{Vector2}(0, 0), \hyperlink{class_vector2}{Vector2} vel=\hyperlink{class_vector2}{Vector2}(0, 0))
+\begin{DoxyCompactList}\small\item\em This class must be initialized with starting acceleration and velocity vectors. The time is used during update calculations and should come from the engine\textquotesingle{}s clock. \end{DoxyCompactList}\item 
+\hypertarget{class_motion_aa4cda5dcd08b8854ee807e8413a268fc}{}\label{class_motion_aa4cda5dcd08b8854ee807e8413a268fc} 
+\hyperlink{class_vector2}{Vector2} \hyperlink{class_motion_aa4cda5dcd08b8854ee807e8413a268fc}{Update} (double rtime)
+\begin{DoxyCompactList}\small\item\em This method updates velocity (not acceleration) A\+F\+T\+ER returning the displacement. The time passed in is current engine time. This means that all movement happens a frame later from the last outside update, since the \char`\"{}old\char`\"{} displacement is returned. \end{DoxyCompactList}\item 
+\hypertarget{class_motion_af91acfa4e8aba0be029f7a8716f9ee69}{}\label{class_motion_af91acfa4e8aba0be029f7a8716f9ee69} 
+\hyperlink{class_vector2}{Vector2} \hyperlink{class_motion_af91acfa4e8aba0be029f7a8716f9ee69}{Get\+Displacement} (double rtime)
+\begin{DoxyCompactList}\small\item\em This method returns a displacement based on current velocity. It updates nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_motion_a07a9a3095b33bec14859fea515611174}{}\label{class_motion_a07a9a3095b33bec14859fea515611174} 
+double {\bfseries l\+Time}
+\item 
+\hypertarget{class_motion_aee2de6ed8260b8aac72a68b03cf985c3}{}\label{class_motion_aee2de6ed8260b8aac72a68b03cf985c3} 
+\hyperlink{class_vector2}{Vector2} {\bfseries acceleration}
+\item 
+\hypertarget{class_motion_ab1d630ea5dd81de4066665673bd422d6}{}\label{class_motion_ab1d630ea5dd81de4066665673bd422d6} 
+\hyperlink{class_vector2}{Vector2} {\bfseries velocity}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper class that has simple functionality for primitive vector physics calculations. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Physics.\+h\item 
+Physics.\+cpp\end{DoxyCompactItemize}

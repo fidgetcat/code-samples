@@ -1,0 +1,42 @@
+\hypertarget{struct_obj_ls_node}{}\section{Obj\+Ls\+Node Struct Reference}
+\label{struct_obj_ls_node}\index{Obj\+Ls\+Node@{Obj\+Ls\+Node}}
+
+
+Basic node used in object lists.  
+
+
+
+
+{\ttfamily \#include $<$Collection.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_obj_ls_node_ab363607829875f39aaaeb69c8e0f73b9}{}\label{struct_obj_ls_node_ab363607829875f39aaaeb69c8e0f73b9} 
+\hyperlink{struct_obj_ls_node_ab363607829875f39aaaeb69c8e0f73b9}{Obj\+Ls\+Node} (class \hyperlink{class_object}{Object} $\ast$in\+Obj, class \hyperlink{class_transform}{Transform} in\+Trans)
+\begin{DoxyCompactList}\small\item\em Straightforward constructor with init list that simply initializes the supplied arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct_obj_ls_node_a2b1d525574c323263c4b6fce4e0a45c4}{}\label{struct_obj_ls_node_a2b1d525574c323263c4b6fce4e0a45c4} 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{struct_obj_ls_node_a2b1d525574c323263c4b6fce4e0a45c4}{my\+Object}
+\begin{DoxyCompactList}\small\item\em Pointer to object associated with this node. \end{DoxyCompactList}\item 
+\hypertarget{struct_obj_ls_node_aae78b2902eeed5cf1104057251d2bcdc}{}\label{struct_obj_ls_node_aae78b2902eeed5cf1104057251d2bcdc} 
+\hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$ \hyperlink{struct_obj_ls_node_aae78b2902eeed5cf1104057251d2bcdc}{next\+Node}
+\begin{DoxyCompactList}\small\item\em Pointer to the next node within this node\textquotesingle{}s list. \end{DoxyCompactList}\item 
+\hypertarget{struct_obj_ls_node_a99f388a245b879697357c363fd972668}{}\label{struct_obj_ls_node_a99f388a245b879697357c363fd972668} 
+\hyperlink{struct_obj_ls_node}{Obj\+Ls\+Node} $\ast$ \hyperlink{struct_obj_ls_node_a99f388a245b879697357c363fd972668}{prev\+Node}
+\begin{DoxyCompactList}\small\item\em Pointer to the previous node within this node\textquotesingle{}s list. \end{DoxyCompactList}\item 
+\hypertarget{struct_obj_ls_node_aa002f5d20dccf6c1fa442d66538e46b1}{}\label{struct_obj_ls_node_aa002f5d20dccf6c1fa442d66538e46b1} 
+\hyperlink{class_transform}{Transform} \hyperlink{struct_obj_ls_node_aa002f5d20dccf6c1fa442d66538e46b1}{my\+Object\+Trans}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_transform}{Transform} information stored when this node is created and/or updated. Usually used to offset an object from its parent transform reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic node used in object lists. 
+
+Obj\+Ls\+Nodes (\hyperlink{class_object}{Object} list node) populate object collections. They are part of a simple linked list system; they also point to their respective \hyperlink{class_object}{Object} and some supplied \hyperlink{class_transform}{Transform} information. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Collection.\+h\end{DoxyCompactItemize}

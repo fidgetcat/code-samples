@@ -1,0 +1,49 @@
+\hypertarget{class_handler}{}\section{Handler Class Reference}
+\label{class_handler}\index{Handler@{Handler}}
+
+
+Base class for the game\textquotesingle{}s event handlers.  
+
+
+
+
+{\ttfamily \#include $<$Handler.\+h$>$}
+
+Inheritance diagram for Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.363363cm]{class_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_handler_a65054f56eca474ad58a12067347d341c}{}\label{class_handler_a65054f56eca474ad58a12067347d341c} 
+{\bfseries Handler} (class \hyperlink{class_handler_collection}{Handler\+Collection} $\ast$input)
+\item 
+\hypertarget{class_handler_a1d7568b0690d98cfecf0b446de9c4250}{}\label{class_handler_a1d7568b0690d98cfecf0b446de9c4250} 
+void {\bfseries Hold} (class \hyperlink{class_handler_collection}{Handler\+Collection} $\ast$target)
+\item 
+\hypertarget{class_handler_aaccb98d642889447dc7d8645df9ef773}{}\label{class_handler_aaccb98d642889447dc7d8645df9ef773} 
+void {\bfseries Letgo} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_handler_a439521850c1d2a5bed66ad4e878bb5ca}{}\label{class_handler_a439521850c1d2a5bed66ad4e878bb5ca} 
+class \hyperlink{class_handler_collection}{Handler\+Collection} $\ast$ {\bfseries my\+Collection}
+\item 
+\hypertarget{class_handler_acee999ed1680b7e1d3c71def7570d864}{}\label{class_handler_acee999ed1680b7e1d3c71def7570d864} 
+struct \hyperlink{struct_hand_ls_node}{Hand\+Ls\+Node} $\ast$ {\bfseries my\+Node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for the game\textquotesingle{}s event handlers. 
+
+This engine processes events instead of having predefined code in an update loop. Objects that trigger or listen for events will normally inherit from either \hyperlink{class_time_handler}{Time\+Handler} or Keyhandler, and then implement the abstract functions. \hyperlink{class_key_handler}{Key\+Handler} has an enum interface that works with S\+F\+ML, while the \hyperlink{class_engine}{Engine} has a clock that works for \hyperlink{class_time_handler}{Time\+Handler}. Objects that want to be interacted with must inherit from or have an \hyperlink{class_interact_handler}{Interact\+Handler}. To be drawn by the engine, objects must be Draw\+Handlers. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Handler.\+h\item 
+Handler.\+cpp\end{DoxyCompactItemize}

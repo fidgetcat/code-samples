@@ -1,0 +1,114 @@
+\hypertarget{class_engine}{}\section{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+Game engine class. Not meant to be derived from.  
+
+
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_engine_af4c789fb939a0870426c698a5124a0ee}{}\label{class_engine_af4c789fb939a0870426c698a5124a0ee} 
+void {\bfseries Run} ()
+\item 
+\hypertarget{class_engine_a6eca7a961050e33cc3e801e8bd83baa4}{}\label{class_engine_a6eca7a961050e33cc3e801e8bd83baa4} 
+double {\bfseries Get\+Time} ()
+\item 
+void \hyperlink{class_engine_a696e2de094fad8a043c105536a84754e}{Interact} (class \hyperlink{class_scr_object}{Scr\+Object} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Method called by objects that want to interact with others. \end{DoxyCompactList}\item 
+void \hyperlink{class_engine_a6636f2c1160776ebdcb1a07159c15e4a}{Udp\+Send} (\hyperlink{class_packet}{Packet} $\ast$pktin, \hyperlink{class_i_padd}{I\+Padd} addin, unsigned short portin)
+\begin{DoxyCompactList}\small\item\em Basic networking method to send a packet. \end{DoxyCompactList}\item 
+\hypertarget{class_engine_a6aaaa07c5d2706799deba2f29e88a2f7}{}\label{class_engine_a6aaaa07c5d2706799deba2f29e88a2f7} 
+void \hyperlink{class_engine_a6aaaa07c5d2706799deba2f29e88a2f7}{Udp\+Bind} (unsigned short portin)
+\begin{DoxyCompactList}\small\item\em Basic networking method to bind the engine\textquotesingle{}s socket to a port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_engine_af71e99fa44783e7e43d54b1af786d219}{}\label{class_engine_af71e99fa44783e7e43d54b1af786d219} 
+bool {\bfseries interact\+Entry}
+\item 
+\hypertarget{class_engine_ac6f3d9928c249b303891a2dff773637d}{}\label{class_engine_ac6f3d9928c249b303891a2dff773637d} 
+sf\+::\+Udp\+Socket {\bfseries socket}
+\item 
+\hypertarget{class_engine_a5a108a01f06e9874ee4c1fda14ff03d8}{}\label{class_engine_a5a108a01f06e9874ee4c1fda14ff03d8} 
+sf\+::\+Clock {\bfseries my\+Clock}
+\item 
+\hypertarget{class_engine_a82e2503954f7314236e0b50fa5019cd1}{}\label{class_engine_a82e2503954f7314236e0b50fa5019cd1} 
+\hyperlink{class_camera}{Camera} {\bfseries my\+Cam}
+\item 
+\hypertarget{class_engine_ae7e9b4f9b0925005fb117dd1fadcfcfc}{}\label{class_engine_ae7e9b4f9b0925005fb117dd1fadcfcfc} 
+sf\+::\+Window $\ast$ {\bfseries my\+Window}
+\item 
+\hypertarget{class_engine_ad0903c9fe548db11a3483f6dff106209}{}\label{class_engine_ad0903c9fe548db11a3483f6dff106209} 
+\hyperlink{class_split_shader}{Split\+Shader} {\bfseries shader}
+\item 
+\hypertarget{class_engine_ab65a6d60cc6723aa970b42f254f8afbd}{}\label{class_engine_ab65a6d60cc6723aa970b42f254f8afbd} 
+\hyperlink{class_split_shader_t_x}{Split\+Shader\+TX} {\bfseries T\+Xshader}
+\item 
+\hypertarget{class_engine_ab52c953691910ddd4b362e1991f8535b}{}\label{class_engine_ab52c953691910ddd4b362e1991f8535b} 
+\hyperlink{class_handler_collection}{Handler\+Collection} {\bfseries time\+Handlers}
+\item 
+\hypertarget{class_engine_a022168a4bc78cd2b4e09066ce8491810}{}\label{class_engine_a022168a4bc78cd2b4e09066ce8491810} 
+\hyperlink{class_handler_collection}{Handler\+Collection} {\bfseries key\+Handlers}
+\item 
+\hypertarget{class_engine_a7591342e66411592267969adb4902e07}{}\label{class_engine_a7591342e66411592267969adb4902e07} 
+\hyperlink{class_handler_collection}{Handler\+Collection} {\bfseries draw\+Handlers}
+\item 
+\hypertarget{class_engine_a37a58bbf99c4f9f8be327703af07d546}{}\label{class_engine_a37a58bbf99c4f9f8be327703af07d546} 
+\hyperlink{class_handler_collection}{Handler\+Collection} {\bfseries interact\+Handlers}
+\item 
+\hypertarget{class_engine_ac693cf7cd72cdce149af50599c841440}{}\label{class_engine_ac693cf7cd72cdce149af50599c841440} 
+\hyperlink{class_handler_collection}{Handler\+Collection} {\bfseries network\+Handlers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Game engine class. Not meant to be derived from. 
+
+The game engine must first be created and then populated with objects before it is Run(). It manages the various game entities through its \hyperlink{class_handler}{Handler} collections. For example, all objects that are or have \hyperlink{class_draw_handler}{Draw\+Handler} are drawn in the \hyperlink{class_engine}{Engine}\textquotesingle{}s update loop. When an object is created outside of the engine, it receives a pointer to the engine and populates the respective collections on its own. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_engine_a696e2de094fad8a043c105536a84754e}{}\label{class_engine_a696e2de094fad8a043c105536a84754e} 
+\index{Engine@{Engine}!Interact@{Interact}}
+\index{Interact@{Interact}!Engine@{Engine}}
+\subsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily void Engine\+::\+Interact (\begin{DoxyParamCaption}\item[{class \hyperlink{class_scr_object}{Scr\+Object} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Method called by objects that want to interact with others. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & -\/ The object calling this method must pass itself as an argument. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_engine_a6636f2c1160776ebdcb1a07159c15e4a}{}\label{class_engine_a6636f2c1160776ebdcb1a07159c15e4a} 
+\index{Engine@{Engine}!Udp\+Send@{Udp\+Send}}
+\index{Udp\+Send@{Udp\+Send}!Engine@{Engine}}
+\subsubsection{\texorpdfstring{Udp\+Send()}{UdpSend()}}
+{\footnotesize\ttfamily void Engine\+::\+Udp\+Send (\begin{DoxyParamCaption}\item[{\hyperlink{class_packet}{Packet} $\ast$}]{pktin,  }\item[{\hyperlink{class_i_padd}{I\+Padd}}]{addin,  }\item[{unsigned short}]{portin }\end{DoxyParamCaption})}
+
+
+
+Basic networking method to send a packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pktin} & -\/ Pointer to the packet being sent. \\
+\hline
+{\em \hyperlink{class_i_padd}{I\+Padd}} & -\/ IP address of recipient; \\
+\hline
+{\em portin} & -\/ Port of recipient. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine.\+h\item 
+Engine.\+cpp\end{DoxyCompactItemize}
