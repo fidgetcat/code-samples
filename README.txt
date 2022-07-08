@@ -1,4 +1,4 @@
-Hello, thanks for checking my stuff out. All of the code here was done solo.
+Hello, thanks for checking my stuff out. All of the code here was done solo. (Although I did use some libraries for FidgetEngine)
 
 
 FidgetEngine:
